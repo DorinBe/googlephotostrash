@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Trash Photo - Google Photos",
+  "version": "1.0",
+  "description": "Moves selected Google Photos image to trash with a hotkey.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://photos.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "trash-photo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X"
+      },
+      "description": "Trash selected photo"
+    }
+  },
+  "action": {
+    "default_title": "Trash Photo"
+  }
+}
