@@ -35,7 +35,7 @@ function trashPhotoAndConfirm() {
     const allButtons = deepQuerySelectorAll(document, 'button');
     const deleteButton = allButtons.find((btn) => {
       const label = btn.getAttribute('aria-label') || btn.title || '';
-      return label.toLowerCase().includes('delete') || label.toLowerCase().includes('trash');
+      return label.toLowerCase().includes('delete') || label.toLowerCase().includes('trash') || label.toLowerCase().includes('bin');
     });
 
     if (deleteButton) {
